@@ -25,13 +25,13 @@ Our shell is a version that works like th sh shell with all the functionalitis a
 - It's execute with ./hsh
 
 ### Files 
-- **Files**
+- **AUTHORS** : List of Contributors
 
 
 ### Flowcharts
 ******
 
-Team:
+###Team:
 
 * Carlos Barrio [charlybarrio](https://github.com/charlybarrio)
-* Martin Poggio
+* Martin Poggio [EliasMartincorre](https://github.com/EliasMartincorre)
