@@ -11,6 +11,10 @@ void execmd(char **argv)
 	command = argv[0]; /**>This is always true */
 
 	/** Remember fork returns twice, 1 for parent, 0 for child*/
+	if (strcmp(command, "exit")== 0)
+	{
+		exit(EXIT_SUCCESS);
+	}
 	if (pid == 0)
 	{
 		if (execvp(command, argv) == -1)
