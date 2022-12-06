@@ -12,24 +12,22 @@ int main(__attribute__((unused)) int ac, char **argv){
     /* Create a loop for the shell's prompt */
     while (1) {
         
-		write(1,"hsh$:  ", 7);
+		write(STDOUT_FILENO,"($) ", 5);
         nchars_read = getline(&lineptr, &n, stdin);
-
-   
+	
+  	
         lineptr_copy = allocatememorychar(nchars_read);
 
         strcpy(lineptr_copy, lineptr);
 
        
         num_tokens = numoftoken(lineptr, delim);/**n of token*/
-
-
+	
+	 
         argv = creatematriz(lineptr_copy, delim, num_tokens);
-		execmd(argv);
-	}
-	    free(argv);
-        free(lineptr);
-		free(lineptr_copy);
+		free(lineptr_copy);	 
+		execmd(argv, lineptr);
+	}	
 	
      
     return (0);

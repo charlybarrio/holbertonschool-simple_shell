@@ -3,7 +3,7 @@
 char *get_location(char *command)
 
 {
-    char *path, *path_copy, *loca;
+    char *path, *path_copy, *loca = NULL;
     int comlen;
     struct stat buffer;
 
@@ -12,10 +12,10 @@ char *get_location(char *command)
     if (path){
         
         path_copy = strdup(path);
-        
+
         comlen = strlen(command);
 		
-		loca = malloc(sizeof(char) * (comlen + 25));
+		loca = malloc(sizeof(char) * (comlen + 15));
 		loca = ensamblarlocation(path_copy, comlen, command);
 
     

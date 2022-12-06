@@ -11,13 +11,13 @@ char * ensamblarlocation(char * pathcopy, int comlen, char * command)
 	struct stat buffer;
 
 	path_token = strtok(pathcopy, ":");
-
+	
 	while (path_token != NULL)
 	{
 		dlen = strlen(path_token);
 		
-		filepath = malloc((dlen + comlen + 3));
-				if (filepath = NULL)
+		filepath = malloc((dlen + comlen + 2));
+				if (filepath == NULL)
 				{
 				return (0);
 				}
@@ -40,6 +40,7 @@ char * ensamblarlocation(char * pathcopy, int comlen, char * command)
 		}
 
 	}
+	free(filepath);
 	free(pathcopy);
 	return (NULL);
 }

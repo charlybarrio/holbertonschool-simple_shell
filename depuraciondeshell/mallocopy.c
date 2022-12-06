@@ -13,5 +13,6 @@ char * allocatememorychar( ssize_t caracteres)
 		perror("memory allocattion error");
 		exit(-1);
 	}
+	free(memreservada);
 	return (memreservada);
 }
