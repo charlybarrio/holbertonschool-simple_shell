@@ -26,7 +26,14 @@ Our shell is a version that works like th sh shell with all the functionalitis a
 
 ### Files 
 - **AUTHORS** : List of Contributors
-
+- **_wich.c** : Checks if the input is a path.
+- **argvcreate.c** : 
+- **execmd.c** :
+- **main.c** :
+- **main.h** :
+- **mallocopy.c** :
+- **numoftoken.c** :
+- **routecommand.c** :
 
 ### Flowcharts
 ******
