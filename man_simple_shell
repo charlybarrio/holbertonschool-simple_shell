@@ -1,0 +1,85 @@
+.TH SIMPLE_SHELL
+
+.SH NAME
+.B
+Simple shell (./hsh)
+- A simplify version of the original Unix system shell.
+
+.SH SYNOPSIS
+#include<sys/types.h>
+.PP
+#include<sys/stat.h>
+.PP
+#include<stdio.h>
+.PP
+#include<stdlib.h>
+.PP
+#include<unistd.h>
+.PP
+#include<string.h>
+.PP
+#include<sys/syscall.h>
+.PP
+#include<errno.h>
+.PP
+#include <sys/wait.h>
+.PP
+.B
+int main(__attribute__
+.I
+((unused))
+, int
+.I
+ac
+, char 
+.I
+**argv)
+
+.SH DESCRIPTION
+- The simple shell project is the final project of the first trimester at Holberton School. To create it we apply C programming language.
+.PP
+The program is a command-line interpreter, this means that the shell is a traductor between the user and the system.
+.PP
+- Take the user input through the keyboard and displays the outputin the screen (in form of standard input).
+.PP
+- Our shell is a version that works like th sh shell with all the functionalitis and a primitive interface.
+
+.SH SIMPLE SHELL FUNCTIONALITIES
+-  Display a prompt and wait for the user to type a command, the command line will end with a new line
+.sp 1
+-  The prompt is displayed each time a command has been executed
+.sp 1
+-  If an executable cannot be found, print an error message and display the prompt
+.sp 1
+-  Handle errors
+.sp 1
+-  Manage the “end of file” condition (Ctrl+D)
+.sp 1
+-  Controlling command lines with arguments
+.sp 1
+-  Handle the PATH
+.sp 1
+-  Operate the exit and env built-in
+
+.SH USAGE EXAMPLES
+To activate 
+.B
+interactive mode
+write "./hsh". The prompt will be displayed. There, you can write commands and will be executed by the simple shell.
+.PP
+To activate 
+.B
+non-interactive mode
+write "echo (
+.I
+command to be executed
+) | ./hsh". EXAMPLES: "echo "Hello!" | ./hsh" or "echo "ls -ltr | ./hsh"
+
+.SH Additional information
+
+atoi (man 3 atoi), close (man 2 close), execve (man 2 execve), exit (man 3 exit), fork (man 2 fork), free (man 3 free), getline (man 3 getline), isatty (man 3 isatty), malloc (man 3 malloc), open (man 2 open), perror (man 3 perror), stat (__xstat) (man 2 stat), strcat (man 3 strcat), strcmp (man 3 strcmp), strdup (man 3 strdup), strtok (man 3 strtok), va_arg (man 2 va_arg), va_end (man 2 va_end), va_start (man 2 va_start), wait (man 2 wait)
+
+.SH AUTHORS
+Carlos Barrio / Martin Correa Poggio
+.sp 1
+Holberton School, 2022

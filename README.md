@@ -1,6 +1,6 @@
 # Project simple shell
 
-###Content
+### Content
 
 > Index
 
@@ -31,7 +31,7 @@ Our shell is a version that works like th sh shell with all the functionalitis a
 ### Flowcharts
 ******
 
-###Team:
+### Team:
 
 * Carlos Barrio [charlybarrio](https://github.com/charlybarrio)
 * Martin Poggio [EliasMartincorre](https://github.com/EliasMartincorre)
