@@ -36,7 +36,8 @@ Our shell is a version that works like th sh shell with all the functionalitis a
 - **routecommand.c** :
 
 ### Flowcharts
-******
+
+![Flowcharts - Page 1](https://user-images.githubusercontent.com/113919382/206513016-c0f65765-d3c7-4a89-a783-5b7ae431878d.png)
 
 ### Team:
 
