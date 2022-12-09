@@ -6,23 +6,21 @@
   *
   *
   */
-char ** creatematriz(char * paratokenizar, const char * delim, int numerodetoken)
+char ** creatematriz(char **matriz, char * paratokenizar, const char * delim, int numerodetoken)
 {
 	char *token;
 	int i = 0;
-	char **av = malloc(sizeof(char*) * numerodetoken);
-	
+	matriz = malloc(sizeof(char *) * numerodetoken);
 	token = strtok(paratokenizar, delim);
 
 	for (i = 0; token != NULL; i++)
 		{
-		 av[i] = malloc(sizeof(char) * strlen(token));
-		strcpy(av[i], token);
-		
+		 matriz[i] = strdup(token);
 		token = strtok(NULL, delim);
 		}
-	av[i] = NULL;
+	matriz[i] = NULL;
+	free(token);
 
-	return (av);
+	return (matriz);
 
 }
