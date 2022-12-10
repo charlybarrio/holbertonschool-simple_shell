@@ -8,7 +8,7 @@
 int numoftoken(char *lineptr, const char *delim)
 {
 	char *token;
-	int numt;
+	int numt = 0;
 
 token = strtok(lineptr, delim);
 
