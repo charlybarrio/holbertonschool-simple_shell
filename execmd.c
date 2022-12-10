@@ -1,36 +1,51 @@
 #include "main.h"
-void execmd(char **argv)
-{
-	pid_t pid;
-        char *command = NULL;
-	int status;
+/**
+  * execmd - function to execute command-
+  * @argv: array of route.
+  * @a: pointer to free.
+  * @b: pointer to freed.
+  * Return: 1 in success otherwhise exit_failure.
+  */
+int execmd(char **argv, char *a, char *b)
+{		/**wpid is just here to catch the stack before its destroyed*/
+pid_t pid;
+char *command = argv[0];
+int status;
 
-	pid = fork();/**copy the id of the father process*/
-	command = argv[0];
-
-	if (strcmp(command, "exit")== 0)
+	if (command == NULL)
 	{
-		printf("Exiting shell ....\n");
-		exit(EXIT_SUCCESS);
+	free(a);
+	ffree(argv);
+	return (1);
 	}
-
-	if (pid == 0)
+if (strcmp(command, "exit") == 0)
 	{
-		if (execvp(command, argv) == -1)
-			printf("pid 0 Error: ");
-		exit(EXIT_FAILURE);
+	free(a);
+	free(b);
+	ffree(argv);
+	exit(EXIT_SUCCESS);
 	}
-	if (pid < 0)
-		printf("pid < 0 Error: ");
-	else /** The parent waits for child to die*/
-	{ 
-		do
-		{
-			pid = waitpid(pid, &status, WUNTRACED);
+pid = fork();
+if (pid == 0)
+	{
+	if (execvp(command, argv) == -1)
+	{
+	ffree(argv);
+	free(a);
+	free(b);
+	perror("42 Error: ");
+	exit(EXIT_FAILURE);
 		}
-	       	while
-			(!WIFEXITED(status) && !WIFSIGNALED(status));
-			/** Use the wifexited and wifsignaled to check if child
-			was exited or cancelled. so parent can stop waiting*/
 	}
+else if (pid < 0)
+	perror("43 Error: ");
+else /** if it isnt 0 or -1 then the parent waits for child to die*/
+	{ /** use a do here so it runs once before checking */
+		do {
+			pid = waitpid(pid, &status, WUNTRACED);
+		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
+	}
+	ffree(argv);
+	free(a);
+	return (1);
 }
