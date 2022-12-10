@@ -1,6 +1,6 @@
 # Project simple shell
 
-###Content
+### Content
 
 > Index
 
@@ -26,12 +26,20 @@ Our shell is a version that works like th sh shell with all the functionalitis a
 
 ### Files 
 - **AUTHORS** : List of Contributors
-
+- **_wich.c** : Checks if the input is a path.
+- **argvcreate.c** : 
+- **execmd.c** :
+- **main.c** :
+- **main.h** :
+- **mallocopy.c** :
+- **numoftoken.c** :
+- **routecommand.c** :
 
 ### Flowcharts
-******
 
-###Team:
+![Flowcharts - Page 1](https://user-images.githubusercontent.com/113919382/206513016-c0f65765-d3c7-4a89-a783-5b7ae431878d.png)
+
+### Team:
 
 * Carlos Barrio [charlybarrio](https://github.com/charlybarrio)
 * Martin Poggio [EliasMartincorre](https://github.com/EliasMartincorre)
