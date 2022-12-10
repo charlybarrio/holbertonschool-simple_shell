@@ -18,7 +18,7 @@ char **creatematriz(char **m, char *tokenizar, const char *delim, int ntoken)
 
 	for (i = 0; token != NULL; i++)
 		{
-		m[i] = strdup(token);
+		m[i] = _strdup(token);
 		token = strtok(NULL, delim);
 		}
 

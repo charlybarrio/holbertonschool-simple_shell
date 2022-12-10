@@ -26,7 +26,7 @@ int num_tokens = 0;
 				exit(EXIT_FAILURE);
 			}
 		}
-	lcopy = strdup(lineptr);
+	lcopy = _strdup(lineptr);
 		num_tokens = numoftoken(lineptr, delim);
 	execmd(creatematriz(argv, lcopy, delim, num_tokens), lcopy, lineptr);
 	}

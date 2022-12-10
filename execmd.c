@@ -18,7 +18,7 @@ int status;
 	ffree(argv);
 	return (1);
 	}
-if (strcmp(command, "exit") == 0)
+if (_strcmp(command, "exit") == 0)
 	{
 	free(a);
 	free(b);

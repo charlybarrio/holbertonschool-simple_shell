@@ -9,6 +9,9 @@
 #include<sys/syscall.h>
 #include<errno.h>
 #include <sys/wait.h>
+int _strlen(char *s);
+char *_strdup(char *str);
+int _strcmp(char *dest, char *src);
 void ffree(char **p);
 char **creatematriz(char **m, char *tokenizar, const char *delim, int ntoken);
 int numoftoken(char *lineptr, const char *delim);
