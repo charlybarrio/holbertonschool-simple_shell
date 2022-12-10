@@ -28,7 +28,7 @@ if (_strcmp(command, "exit") == 0)
 pid = fork();
 if (pid == 0)
 	{
-	if (execve(command, argv, NULL) == -1 || pid < 0)
+	if (execvp(command, argv) == -1)
 	{
 	ffree(argv);
 	free(a);
@@ -37,6 +37,8 @@ if (pid == 0)
 	exit(EXIT_FAILURE);
 		}
 	}
+else if (pid < 0)
+	perror("43 Error: ");
 else /** if it isnt 0 or -1 then the parent waits for child to die*/
 	{ /** use a do here so it runs once before checking */
 		do {
