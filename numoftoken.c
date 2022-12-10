@@ -4,7 +4,7 @@
   *
   *
   */
-int numoftoken(char * lineptr, const char *delim)
+int numoftoken(char * lineptr,const char *delim)
 {
  char *token;
  int numt;
@@ -17,5 +17,7 @@ int numoftoken(char * lineptr, const char *delim)
 token = strtok(NULL, delim);
  }
  numt++;
+ free(token);
  return (numt);
 }
+
