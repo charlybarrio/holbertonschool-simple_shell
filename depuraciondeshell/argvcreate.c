@@ -1,26 +1,30 @@
 #include"main.h"
 /**
-  *
-  *
-  *
-  *
-  *
+  * creatematriz - allocate memory for array of pointers.
+  * @m: matriz double pointer to argv.
+  * @tokenizar: line read at stdin.
+  * @delim: delimiter for tokenizar.
+  * @ntoken: numbers os string tokenizados.
+  * Return: pointer to memory allocate.
   */
-char ** creatematriz(char **matriz, char * paratokenizar, const char * delim, int numerodetoken)
+char **creatematriz(char **m, char *tokenizar, const char *delim, int ntoken)
 {
 	char *token;
 	int i = 0;
-	matriz = malloc(sizeof(char *) * numerodetoken);
-	token = strtok(paratokenizar, delim);
+
+	m = malloc(sizeof(char *) * ntoken);
+
+	token = strtok(tokenizar, delim);
 
 	for (i = 0; token != NULL; i++)
 		{
-		 matriz[i] = strdup(token);
+		m[i] = strdup(token);
 		token = strtok(NULL, delim);
 		}
-	matriz[i] = NULL;
+
+	m[i] = NULL;
 	free(token);
 
-	return (matriz);
+	return (m);
 
 }
