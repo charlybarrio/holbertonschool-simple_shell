@@ -1,10 +1,5 @@
 #ifndef MAIN
 #define MAIN
-
-#define CWDBUFF 128
-#define COMBUFF 128
-#define PATBUFF 256
-
 #include<sys/types.h>
 #include<sys/stat.h>
 #include<stdio.h>
@@ -28,4 +23,5 @@ int numoftoken(char *lineptr, const char *delim);
 int execmd(char **argv, char *a, char *b);
 char *get_location(char *comando);
 char *_strcpy(char *dest, char *src);
+void printenv(void);
 #endif

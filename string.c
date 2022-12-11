@@ -125,3 +125,22 @@ char *_strcat(char *dest, char *src)
 	a = dest;
 	return (a);
 }
+/**
+ * printenv - function that prints enviroment
+ */
+void printenv(void)
+{
+	unsigned int i;
+	unsigned int x = 0;
+
+	for (i = 0; environ[i] != NULL; i++)
+	{
+	}
+	while (x <= i)
+	{
+		write(1, environ[x], _strlen(environ[x]));
+		putchar('\n');
+		x++;
+	}
+	free(environ);
+}
