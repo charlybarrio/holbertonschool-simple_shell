@@ -14,17 +14,12 @@ int status;
 
 	if (command == NULL)
 	{
-	free(a);
-	ffree(argv);
-	return (1);
-	}
+	free(a), ffree(argv);
+	return (1);	}
 if (_strcmp(command, "exit") == 0)
 	{
-	free(a);
-	free(b);
-	ffree(argv);
-	exit(EXIT_SUCCESS);
-	}
+	free(a), free(b), ffree(argv);
+	exit(EXIT_SUCCESS);	}
 pid = fork();
 while (1)
 {
@@ -33,38 +28,22 @@ while (1)
 		if (_strcmp(exitt, argv[0]) == 0)
 		{
 			free(argv), free(a), free(b);
-			break;
-		}
-
+			break;	}
 		if (_strcmp("env", argv[0]) == 0)
 		{
-			printenv(), putchar('\n');
-			ffree(argv);
-			free(a);
-			free(b);
-			break;
-		}
-
+			printenv(), putchar('\n'), ffree(argv), free(a), free(b);
+			break;	}
 		if (execve(argv[0], argv, environ) == -1)
 		{
-			ffree(argv);                                       
-                        free(a);                                           
-                        free(b);                                           
-                        perror("42 Error: ");                              
-                        exit(EXIT_FAILURE);  
-		}
-	}
+			ffree(argv), free(a), free(b), perror("42 Error: ");
+			exit(EXIT_FAILURE);	}	}
 else if (pid < 0)
 	perror("43 Error: ");
 else /** if it isnt 0 or -1 then the parent waits for child to die*/
 	{ /** use a do here so it runs once before checking */
 		do {
 			pid = waitpid(pid, &status, WUNTRACED);
-		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
-	}
-	ffree(argv);
-	free(a);
-	return (1);
-}
-return(0);
-}
+		} while (!WIFEXITED(status) && !WIFSIGNALED(status));	}
+	ffree(argv), free(a);
+	return (1);	}
+return (0);	}
