@@ -25,13 +25,9 @@ while (1)
 {
 	if (pid == 0)
 	{
-		if (_strcmp(exitt, argv[0]) == 0)
-		{
-			free(argv), free(a), free(b);
-			break;	}
 		if (_strcmp("env", argv[0]) == 0)
-		{
-			printenv(), putchar('\n'), ffree(argv), free(a), free(b);
+		{	ffree(argv), free(a), free(b);
+			printenv(), putchar('\n');
 			break;	}
 		if (execve(argv[0], argv, environ) == -1)
 		{
