@@ -22,16 +22,18 @@ dest[arr2 + arr1] = '\0';
 return (dest);
 }
 /**
-* printenv - function that prints enviroment.
+*_printenv - function that prints enviroment.
 * Return: 0 in success.
 */
 
 int _printenv(void)
 {
- char **env = environ; 
-  while (*env) {
-    printf("%s\n", *env);
-    env++;
-  }
-  return (0);
+	char **env = environ;
+
+	while (*env)
+	{
+		printf("%s\n", *env);
+		env++;
+	}
+	return (0);
 }
