@@ -10,8 +10,8 @@
 #include<errno.h>
 #include <sys/wait.h>
 
+void ffreed(char *pp);
 extern char **environ;
-
 char *_getenv(char *envy);
 char *_strcat(char *dest, char *src);
 int _strlen(char *s);
@@ -23,5 +23,5 @@ int numoftoken(char *lineptr, const char *delim);
 int execmd(char **argv, char *a, char *b);
 char *get_location(char *comando);
 char *_strcpy(char *dest, char *src);
-void printenv(void);
+int _printenv(void);
 #endif
