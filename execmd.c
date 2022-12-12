@@ -9,13 +9,13 @@
 int execmd(char **argv, char *a, char *b)
 {
 pid_t pid;
-char *command = argv[0], *exitt = "exit";
+char *command = argv[0];
 int status;
 
 	if (command == NULL)
 	{
 	free(a), ffree(argv);
-	return (1);	}
+	exit(EXIT_SUCCESS);	}
 if (_strcmp(command, "exit") == 0)
 	{
 	free(a), free(b), ffree(argv);
@@ -27,11 +27,11 @@ while (1)
 	{
 		if (_strcmp("env", argv[0]) == 0)
 		{	ffree(argv), free(a), free(b);
-			printenv(), putchar('\n');
-			break;	}
+			_printenv(), putchar('\n');
+			exit(EXIT_SUCCESS);	}
 		if (execve(argv[0], argv, environ) == -1)
 		{
-			ffree(argv), free(a), free(b), perror("42 Error: ");
+			 perror(argv[0]), ffree(argv), free(a), free(b);
 			exit(EXIT_FAILURE);	}	}
 else if (pid < 0)
 	perror("43 Error: ");

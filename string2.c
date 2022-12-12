@@ -26,13 +26,12 @@ return (dest);
 * Return: 0 in success.
 */
 
-int printenv(void)
+int _printenv(void)
 {
-
-	while (*environ)
-	{
-		printf("%s\n", *environ);
-		environ++;
-	}
-	return (0);
+ char **env = environ; 
+  while (*env) {
+    printf("%s\n", *env);
+    env++;
+  }
+  return (0);
 }
