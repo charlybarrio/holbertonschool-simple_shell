@@ -9,36 +9,30 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, c;
-	char *a;
+int arr1;
+int arr2;
 
-	c = -1;
-	for (i = 0; dest[i] != '\0'; i++)
-		;
-	while (src[++c])
-	{
-		dest[i] = src[c];
-		i++;
-	}
-	a = dest;
-	return (a);
+for (arr2 = 0; dest[arr2] != '\0'; arr2++)
+{}
+for (arr1 = 0; src[arr1] != '\0'; arr1++)
+{
+dest[arr2 + arr1] = src[arr1];
+}
+dest[arr2 + arr1] = '\0';
+return (dest);
 }
 /**
- * printenv - function that prints enviroment
- */
-void printenv(void)
-{
-	unsigned int i;
-	unsigned int x = 0;
+* printenv - function that prints enviroment.
+* Return: 0 in success.
+*/
 
-	for (i = 0; environ[i] != NULL; i++)
+int printenv(void)
+{
+
+	while (*environ)
 	{
+		printf("%s\n", *environ);
+		environ++;
 	}
-	while (x <= i)
-	{
-		write(1, environ[x], _strlen(environ[x]));
-		putchar('\n');
-		x++;
-	}
-	free(environ);
+	return (0);
 }
