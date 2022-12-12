@@ -26,7 +26,7 @@ Our shell is a version that works like th sh shell with all the functionalitis a
 
 ### Files 
 - **AUTHORS** : List of Contributors
-- **_wich.c** : Checks if the input is a path.
+- **_wich.c** : Checks the input 
 - **argvcreate.c** : 
 - **execmd.c** :
 - **main.c** :
