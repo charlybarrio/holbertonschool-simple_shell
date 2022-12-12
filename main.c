@@ -14,7 +14,13 @@ int num_tokens = 0;
 
 	while (1)
 	{
+		if (isatty(0))
+		{
 	write(STDOUT_FILENO, "($) ", 5);
+		}
+		else
+		{
+		}
 		if (getline(&lineptr, &n, stdin) == -1)
 		{
 			if (feof(stdin))
