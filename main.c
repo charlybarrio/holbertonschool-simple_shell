@@ -18,19 +18,10 @@ int num_tokens = 0;
 		{
 	write(STDOUT_FILENO, "($) ", 5);
 		}
-		else
-		{
-		}
+
 		if (getline(&lineptr, &n, stdin) == -1)
-		{
-			if (feof(stdin))
-			{
+		{		free(lineptr);
 				exit(EXIT_SUCCESS);
-			}
-			else
-			{
-				exit(EXIT_FAILURE);
-			}
 		}
 	lcopy = _strdup(lineptr);
 		num_tokens = numoftoken(lineptr, delim);
