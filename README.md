@@ -40,6 +40,7 @@ Our shell is a version that works like th sh shell with all the functionalitis a
 
 ### Example
 
+![shell1](https://user-images.githubusercontent.com/113919382/207421169-7078842c-d28c-40fd-a3f4-0301c140b816.png)
 
 ### Flowcharts
 
