@@ -25,7 +25,7 @@ char *get_location(char *command)
 			_strcat(file_path, command);
 			_strcat(file_path, "\0");
 			if (stat(file_path, &buffer) == 0)
-			{	
+			{
 				free(path_copy);
 				return (file_path);
 			}
