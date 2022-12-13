@@ -26,14 +26,20 @@ Our shell is a version that works like th sh shell with all the functionalitis a
 
 ### Files 
 - **AUTHORS** : List of Contributors
-- **_wich.c** : Checks the input 
-- **argvcreate.c** : 
-- **execmd.c** :
-- **main.c** :
-- **main.h** :
-- **mallocopy.c** :
-- **numoftoken.c** :
-- **routecommand.c** :
+- **_getenv.c** : get the environment
+- **argvcreate.c** : It allocate the necessary memory for array of pointer
+- **execmd.c** : function that execute command
+- **ffree.c** : frees the arrays
+- **location.c** : It gives you the absolute route
+- **main.c** :  Function that contains the main code, it coordinates the execution of programs and alternate between interactive and non-interactive shell
+- **main.h** : Header files
+- **man_simple_shell** : Manual of the simple shell
+- **numoftoken.c** : It is a counter of the elements to be tokenizer
+- **string.c** : Auxiliar funcionts for the strings
+- **string2.c** : More auxiliar functions.
+
+### Example
+
 
 ### Flowcharts
 
