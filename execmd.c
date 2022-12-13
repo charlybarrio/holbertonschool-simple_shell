@@ -19,7 +19,7 @@ int execmd(char **argv, char *a, char *b)
 	if (_strcmp(acommand, "exit") == 0)
 	{
 		free(a), free(b), ffree(argv);
-		exit(EXIT_SUCCESS);	}
+		exit(2);	}
 	while ((acommand = get_location(argv[0])) == NULL)
 	{
 		ffree(argv), free(a);
