@@ -14,8 +14,8 @@ int status;
 
 	if (command == NULL)
 	{
-	free(a), ffree(argv);
-	exit(EXIT_SUCCESS);	}
+/**free(b)*/ free(a), ffree(argv);
+	return (1);	}
 if (_strcmp(command, "exit") == 0)
 	{
 	free(a), free(b), ffree(argv);
