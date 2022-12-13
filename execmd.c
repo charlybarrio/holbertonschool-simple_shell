@@ -19,7 +19,7 @@ int status;
 if (_strcmp(command, "exit") == 0)
 	{
 	free(a), free(b), ffree(argv);
-	exit(EXIT_SUCCESS);	}
+	exit(2);	}
 pid = fork();
 while (1)
 {
