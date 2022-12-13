@@ -21,7 +21,7 @@ int num_tokens = 0;
 		if (getline(&lineptr, &n, stdin) == -1)
 		{
 			free(lineptr);
-			exit(2);
+			exit(EXIT_SUCCESS);
 
 		}
 		lcopy = _strdup(lineptr);
