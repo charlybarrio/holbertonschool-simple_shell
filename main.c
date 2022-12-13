@@ -14,20 +14,19 @@ int num_tokens = 0;
 
 	while (1)
 	{
-if (isatty(0))
-	{
-	write(STDOUT_FILENO, "($) ", 5);
-	}
-	if (getline(&lineptr, &n, stdin) == -1)
-	{ 
-		free(lineptr);
-		exit(2);
+		if (isatty(0))
+		{
+			write(STDOUT_FILENO, "($) ", 5);
+		}
+		if (getline(&lineptr, &n, stdin) == -1)
+		{
+			free(lineptr);
+			exit(2);
 
+		}
+		lcopy = _strdup(lineptr);
+			num_tokens = numoftoken(lineptr, delim);
+		execmd(creatematriz(argv, lcopy, delim, num_tokens), lcopy, lineptr);
 	}
-	lcopy = _strdup(lineptr);
-		num_tokens = numoftoken(lineptr, delim);
-	execmd(creatematriz(argv, lcopy, delim, num_tokens), lcopy, lineptr);
-	}
-return (EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }
-
